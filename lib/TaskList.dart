@@ -26,10 +26,38 @@ class _TaskListState extends State<TaskList> {
               child: CircularProgressIndicator(),
             );
           } else {
-            return ListView.builder(
+            return Scaffold(
+                backgroundColor: Color(0xffffcdd2),
+              appBar: AppBar(
+                leading: IconButton(
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(Icons.arrow_back_ios),
+                  color: Colors.black,
+                ),
+                backgroundColor: Colors.transparent,
+                elevation: 0.0,
+                title: Text(
+                  'Task List',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'robotomono'
+                  ),
+                ),
+                centerTitle: true,
+              ),
+              body:
+              ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
-                return Card(
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xffff9a9a),
+                      borderRadius: BorderRadius.all(Radius.circular(60.0)),
+
+                  ),
+
                   child: InkWell(
                     onTap: () => Navigator.push(
                         context,
@@ -61,6 +89,7 @@ class _TaskListState extends State<TaskList> {
                   ),
                 );
               },
+            )
             );
           }
         });

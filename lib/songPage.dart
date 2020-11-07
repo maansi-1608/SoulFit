@@ -23,6 +23,7 @@ class _SongpageState extends State<Songpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffffcdd2),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Center(
@@ -75,7 +76,7 @@ class _SongpageState extends State<Songpage> {
                       child: Icon(
                         Icons.play_arrow,
                         size: 50.0,
-                        color: isplaying == true ? Colors.blue : Colors.black,
+                        color: isplaying == true ? Colors.red : Colors.black,
                       ),
                     ),
                   ),
@@ -90,7 +91,7 @@ class _SongpageState extends State<Songpage> {
                       child: Icon(
                         Icons.stop,
                         size: 50.0,
-                        color: isplaying == true ? Colors.black : Colors.blue,
+                        color: isplaying == true ? Colors.black : Colors.red,
                       ),
                     ),
                   ),

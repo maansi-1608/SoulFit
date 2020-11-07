@@ -9,7 +9,26 @@ class AppointmentState extends State<Appointment> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFF21BFBD),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.black,
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        title: Text(
+          'Appointments',
+          style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'robotomono'
+          ),
+        ),
+        centerTitle: true,
+      ),
+      backgroundColor: Color(0XFFBBDEFB),
       body:
       ListView(
           children: <Widget>[
@@ -23,9 +42,9 @@ class AppointmentState extends State<Appointment> {
                 child: Text(
                   'Upcoming Appointments',
                   style: TextStyle(
-                      fontSize: 75,
-                      color: Colors.white,
-                      fontFamily: 'Montserrat'
+                      fontSize: 50,
+                      color: Colors.black,
+                      fontFamily: 'robotomono'
                   ),
                 )
             ),
@@ -39,39 +58,41 @@ class AppointmentState extends State<Appointment> {
               Column(children: <Widget>[
 
                 Container(
-                  height: 50,
+                  height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.white70,
+                    color: Colors.white12,
                     borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(75.0)),
+                        bottomLeft: Radius.circular(75.0)),
 
                   ),
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Card(
+                        Container(
                             child: Text('Ms. Clarke',
                               style: TextStyle(
                                   fontSize: 30,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
 
                         ),
-                        Card(
-                          child: Column(children: [
+                        Container(
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
                             Text('10/28/2020',
                               style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             ),
                             Text('16:30',
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 15,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
                           ]
@@ -81,39 +102,41 @@ class AppointmentState extends State<Appointment> {
                   ),
                 ),
                 Container(
-                  height: 50,
+                  height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.white60,
+                    color: Colors.white38,
                     borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(75.0)),
+                        bottomLeft: Radius.circular(75.0)),
 
                   ),
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Card(
+                        Container(
                             child: Text('Mr. Kapoor',
                               style: TextStyle(
                                   fontSize: 30,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
 
                         ),
-                        Card(
-                          child: Column(children: [
+                        Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
                             Text('10/29/2020',
                               style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             ),
                             Text('17:30',
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 15,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
                           ]

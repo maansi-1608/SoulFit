@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
                     )
                 )
             ),
-            backgroundColor: Colors.greenAccent,
-            primaryColor: Colors.tealAccent,
+            backgroundColor: Colors.deepPurple,
+            primaryColor: Colors.deepPurple,
             accentColor: Colors.blueAccent
         )
     );
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int curIndex = 0;
   List <Widget> page = [
     HomePage(),
-    //PatientList(),
+    PatientList(),
     Appointment(),
   ];
   void _onItemTapped(int index) {
@@ -62,13 +62,13 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget build(BuildContext context) {
       print(curIndex);
       return new Scaffold(
-        backgroundColor: Color(0xff84FFFF),
+        backgroundColor: Color(0XFF21BFBD),
         appBar: AppBar(
-            title: Text('Cognificent!')),
+            title: Text('SoulFit')),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: curIndex,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white70,
+          backgroundColor: Colors.white54,
           iconSize: 20,
           unselectedFontSize: 15,
           selectedFontSize: 20,
@@ -77,10 +77,11 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.home),
               title: Text('Home'),
             ),
-            //BottomNavigationBarItem(
-             // icon: Icon(Icons.list),
-             // title: Text('Patient List'),
-           // ),
+
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              title: Text('Patient List'),
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_pin),
               title: Text('Appointments'),

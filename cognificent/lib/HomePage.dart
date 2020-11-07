@@ -1,3 +1,4 @@
+import 'package:cognificent/Appointment.dart';
 import 'package:cognificent/PatientList.dart';
 import 'package:flutter/material.dart';
 import './main.dart';
@@ -12,57 +13,58 @@ class HomePageState extends State<HomePage>{
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Color(0XFF21BFBD),
+      backgroundColor: Color(0XFFBBDEFB),
       body:
       ListView(
         children : <Widget>[
-
-          Padding(
-            padding: EdgeInsets.only(top:15 , left: 10),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget> [
-
-                Text(
-                    'Cognize!',
-                style: TextStyle(
-                  fontSize: 50,
-                  color: Colors.white,
-                  fontFamily:'Montserrat'
-                ),
-          ),
-              Container(
-                width: 60,
-                height: 60,
-                child: Image.asset('assets/images/brain.jpeg'),
-              )
-              ],
-          )
-          ),
           SizedBox(
-            height: 25,
+            height:20
           ),
+          Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:[
+          Container(
+            child:
           Padding(
-            padding: EdgeInsets.only(left:40.0),
+            padding: EdgeInsets.all(10),
             child:Text(
-              'Hello Dr.Sen',
+              'Hello Dr.Joshi!',
               style: TextStyle(
-                  fontSize: 75,
-                  color: Colors.white,
-                  fontFamily:'Montserrat'
+                  fontSize: 40,
+                  color: Colors.black,
+                  fontFamily:'robotomono'
               ),
             )
           ),
+          ),
+              Expanded(
+                child:
+              Container(
+                height: 150.0,
+                child:
+                Card(
+                  child: Image.asset('assets/images/head.PNG'),
+                ),
+              ),
+              )
+          ]
+          ),
           SizedBox(height: 40,),
           Container(
-          height: MediaQuery.of(context).size.height -185 ,
+
+          height: MediaQuery.of(context).size.height -195,
           child:
-          Column( children : <Widget>[
+          Column(
+              children : <Widget>[
+                SizedBox(
+                  height:20
+                ),
 
             Container(
-                height: 50 ,
+                width: double.infinity,
+                height: 100 ,
                 decoration: BoxDecoration(
-                  color: Colors.white70,
-                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(75.0)),
+                  color: Colors.white10,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(75.0)),
 
                 ),
                 child: FlatButton(
@@ -73,54 +75,58 @@ class HomePageState extends State<HomePage>{
                     },
                     child: Text('Patient Count : 15',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.black,
-                          fontFamily: 'Montserrat'
+                          fontFamily: 'robotomono'
                         )
                     )
                 )
             ),
             Container(
-                height: 50 ,
+                width: double.infinity,
+                height: 100 ,
                 decoration: BoxDecoration(
-                  color: Colors.white38,
-                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(75.0)),
+                  color: Colors.white24,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(75.0)),
 
                 ),
                 child: Column(
-
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text('Reports updated as on 10/26',
+                      Text('Reports updated as on 11/06 :',
                           style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontFamily: 'robotomono'
                           )
                       ),
                       Text('10',
                           style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
+                              fontSize: 30,
+                              color: Colors.black,
+                              fontFamily: 'robotomono'
                           )
                       ),
                     ]
                 )
             ),
             Container(
-                height: 50 ,
+                width: double.infinity,
+                height: 100 ,
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(75.0)),
+                  color: Colors.white54,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(75.0)),
 
                 ),
               child: FlatButton(
                 onPressed:() { Navigator.push(
-                context,MaterialPageRoute(builder: (context) => PatientList()),);
+                context,MaterialPageRoute(builder: (context) => Appointment()),);
                     },
                   child: Text('Upcoming Appointments:2',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 25,
                                 color: Colors.black,
-                                fontFamily: 'Montserrat'
+                                fontFamily: 'robotomono'
                               )
   )
     )

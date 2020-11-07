@@ -11,7 +11,7 @@ class PatientList extends StatefulWidget {
 class _PatientListState extends State<PatientList> {
   Future getdata() async {
     QuerySnapshot qn =
-    await Firestore.instance.collection('report').getDocuments();
+    await Firestore.instance.collection('patientList').getDocuments();
     return qn.documents;
   }
 
@@ -25,10 +25,40 @@ class _PatientListState extends State<PatientList> {
               child: CircularProgressIndicator(),
             );
           } else {
-            return ListView.builder(
+            return Scaffold(
+              backgroundColor: Color(0XFFBBDEFB),
+                appBar: AppBar(
+                leading: IconButton(
+                onPressed: (){
+              Navigator.of(context).pop();
+            },
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.black,
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          title: Text(
+          'Patient List',
+          style: TextStyle(
+          color: Colors.black,
+          fontFamily: 'robotomono'
+          ),
+          ),
+          centerTitle: true,
+          ),
+              body:
+              ListView.builder(
+
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
-                return Card(
+                return Container(
+                  width: double.infinity,
+                  height: 100 ,
+                  decoration: BoxDecoration(
+                    color: Colors.white38,
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(75.0)),
+
+                  ),
                   child: InkWell(
                     onTap: () => Navigator.push(
                         context,
@@ -47,11 +77,8 @@ class _PatientListState extends State<PatientList> {
                             Text(
                               snapshot.data[index].data['Title'],
                               style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 30.0,
                               ),
-                            ),
-                            Text(
-                              (snapshot.data[index].data['Pulse'].toString()),
                             ),
                           ]
                       ),
@@ -60,6 +87,7 @@ class _PatientListState extends State<PatientList> {
                   ),
                 );
               },
+            )
             );
           }
         });

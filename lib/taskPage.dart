@@ -16,6 +16,7 @@ class _TaskpageState extends State<Taskpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffffcdd2),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Center(

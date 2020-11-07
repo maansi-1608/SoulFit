@@ -65,9 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     print(curIndex);
     return new Scaffold(
-      backgroundColor: Color(0xff84FFFF),
+      backgroundColor: Color(0xffffcdd2),
       appBar: AppBar(
-          title: Text('CogniFlex'),
+          title: Text('SoulFit'),
           backgroundColor: Color(0xff885566) ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: curIndex,

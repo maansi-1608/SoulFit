@@ -53,7 +53,7 @@ class HomePageState extends State<HomePage> {
         child: Text('Outdoors',
             style: TextStyle(
               fontSize: 20,
-              color: Colors.red,
+              color: Colors.black,
             )
         )
 
@@ -77,7 +77,7 @@ class HomePageState extends State<HomePage> {
     else if (pulse < 80)
       pulseStat =  Text('Low!Needs attention',
             style:TextStyle(
-              color: Colors.amber,
+              color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             )
@@ -92,7 +92,7 @@ class HomePageState extends State<HomePage> {
           child: Text('High! possiblity of an anxiety attack',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.red,
+                color: Colors.black,
               )
           )
 
@@ -106,7 +106,7 @@ class HomePageState extends State<HomePage> {
          'Optimal Charge - $battery%',
          style: TextStyle(
            fontSize: 20,
-           color: Colors.lightGreen,
+           color: Colors.black,
          )
      );
    }
@@ -124,7 +124,7 @@ class HomePageState extends State<HomePage> {
          'Low battery $battery%',
          style: TextStyle(
            fontSize: 20,
-           color: Colors.red,
+           color: Colors.black,
          )
      );
    }
@@ -132,6 +132,7 @@ class HomePageState extends State<HomePage> {
  }
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Color(0xffffcdd2),
       body: SingleChildScrollView(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -140,6 +141,11 @@ class HomePageState extends State<HomePage> {
               Container(
                   width: double.infinity,
                   padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.white10,
+                    borderRadius: BorderRadius.all(Radius.circular(60.0))
+
+                  ),
                   child: Center(
                     child: Text(
                       'Greetings!',
@@ -152,8 +158,12 @@ class HomePageState extends State<HomePage> {
 
                   )
               ),
-               Card(
-                  elevation: 20,
+               Container(
+                   decoration: BoxDecoration(
+                       color: Color(0xffff9a9a),
+                       borderRadius: BorderRadius.all(Radius.circular(60.0))
+
+                   ),
                   child: Row(
 
                     children: <Widget>
@@ -187,12 +197,16 @@ class HomePageState extends State<HomePage> {
                   )
               ),
 
-              Card(
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffff9a9a),
+                    borderRadius: BorderRadius.all(Radius.circular(60.0))
+
+                ),
                 margin: EdgeInsets.symmetric(
                 vertical: 10,
                 horizontal: 10)
                 ,
-                elevation: 20,
                 child:
               Center(
                   child: Column(
@@ -226,11 +240,15 @@ class HomePageState extends State<HomePage> {
                   )
               ),
               ),
-              Card(
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(0xffff9a9a),
+                    borderRadius: BorderRadius.all(Radius.circular(60.0))
+
+                ),
                 margin: EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 10),
-                elevation: 20,
                 child:Container(
                   width:double.infinity,
 
