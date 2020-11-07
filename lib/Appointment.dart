@@ -15,20 +15,20 @@ class AppointmentState extends State<Appointment> {
             Navigator.of(context).pop();
           },
           icon: Icon(Icons.arrow_back_ios),
-          color: Colors.white,
+          color: Colors.black,
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Text(
           'Appointments',
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Nanum Gothic Coding'
+              color: Colors.black,
+              fontFamily: 'robotomono'
           ),
         ),
         centerTitle: true,
       ),
-      backgroundColor: Color(0XFF21BFBD),
+      backgroundColor: Color(0XFFBBDEFB),
       body:
       ListView(
           children: <Widget>[
@@ -43,8 +43,8 @@ class AppointmentState extends State<Appointment> {
                   'Upcoming Appointments',
                   style: TextStyle(
                       fontSize: 50,
-                      color: Colors.white,
-                      fontFamily: 'Montserrat'
+                      color: Colors.black,
+                      fontFamily: 'robotomono'
                   ),
                 )
             ),
@@ -72,7 +72,7 @@ class AppointmentState extends State<Appointment> {
                               style: TextStyle(
                                   fontSize: 30,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
 
@@ -85,14 +85,14 @@ class AppointmentState extends State<Appointment> {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             ),
                             Text('16:30',
                               style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
                           ]
@@ -116,7 +116,7 @@ class AppointmentState extends State<Appointment> {
                               style: TextStyle(
                                   fontSize: 30,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
 
@@ -129,14 +129,14 @@ class AppointmentState extends State<Appointment> {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             ),
                             Text('17:30',
                               style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
-                                  fontFamily: 'Montserrat'
+                                  fontFamily: 'robotomono'
                               ),
                             )
                           ]

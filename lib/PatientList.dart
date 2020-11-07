@@ -26,22 +26,22 @@ class _PatientListState extends State<PatientList> {
             );
           } else {
             return Scaffold(
-              backgroundColor: Color(0XFF21BFBD),
+              backgroundColor: Color(0XFFBBDEFB),
                 appBar: AppBar(
                 leading: IconButton(
                 onPressed: (){
               Navigator.of(context).pop();
             },
           icon: Icon(Icons.arrow_back_ios),
-          color: Colors.white,
+          color: Colors.black,
           ),
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           title: Text(
           'Patient List',
           style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Nanum Gothic Coding'
+          color: Colors.black,
+          fontFamily: 'robotomono'
           ),
           ),
           centerTitle: true,

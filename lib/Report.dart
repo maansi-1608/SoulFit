@@ -13,22 +13,22 @@ class _ReportState extends State<Report> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0XFF21BFBD),
+      backgroundColor: Color(0XFFBBDEFB),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
           icon: Icon(Icons.arrow_back_ios),
-          color: Colors.white,
+          color: Colors.black,
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Text(
           'Patient Report',
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Nanum Gothic Coding'
+              color: Colors.black,
+              fontFamily: 'robotomono'
           ),
         ),
         centerTitle: true,
@@ -81,8 +81,8 @@ class _ReportState extends State<Report> {
                     widget.title,
                     style: TextStyle(
                       fontSize: 40.0,
-                      color: Colors.white,
-                      fontFamily: 'Nanum Gothic Coding',
+                      color: Colors.black,
+                      fontFamily: 'robotomono',
                     ),
                   ),
                 ),
@@ -93,14 +93,14 @@ class _ReportState extends State<Report> {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Container(color: Color(0XFF7FFFD4),
+                          Container(color: Color(0XFFBBDEFB),
                               child: Column(mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                   Text('-Caretaker\'s Report-',
                                       style: TextStyle(
                                           fontSize: 30.0,
                                           color: Colors.black,
-                                          fontFamily: 'Nanum Gothic Coding',
+                                          fontFamily: 'robotomono',
                                               ),),
 
                                              Text(

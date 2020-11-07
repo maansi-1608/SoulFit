@@ -13,7 +13,7 @@ class HomePageState extends State<HomePage>{
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: Color(0XFF21BFBD),
+      backgroundColor: Color(0XFFBBDEFB),
       body:
       ListView(
         children : <Widget>[
@@ -27,11 +27,11 @@ class HomePageState extends State<HomePage>{
           Padding(
             padding: EdgeInsets.all(10),
             child:Text(
-              'Hello Dr.Sen!',
+              'Hello Dr.Joshi!',
               style: TextStyle(
                   fontSize: 40,
-                  color: Colors.white,
-                  fontFamily:'Nanum Gothic Coding'
+                  color: Colors.black,
+                  fontFamily:'robotomono'
               ),
             )
           ),
@@ -42,7 +42,7 @@ class HomePageState extends State<HomePage>{
                 height: 150.0,
                 child:
                 Card(
-                  child: Image.asset('assets/images/brain.jpeg'),
+                  child: Image.asset('assets/images/head.PNG'),
                 ),
               ),
               )
@@ -77,7 +77,7 @@ class HomePageState extends State<HomePage>{
                         style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,
-                          fontFamily: 'Nanum Gothic Coding'
+                          fontFamily: 'robotomono'
                         )
                     )
                 )
@@ -93,18 +93,18 @@ class HomePageState extends State<HomePage>{
                 child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text('Reports updated as on 10/26 :',
+                      Text('Reports updated as on 11/06 :',
                           style: TextStyle(
                               fontSize: 25,
                               color: Colors.black,
-                              fontFamily: 'Nanum Gothic Coding'
+                              fontFamily: 'robotomono'
                           )
                       ),
                       Text('10',
                           style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
-                              fontFamily: 'Nanum Gothic Coding'
+                              fontFamily: 'robotomono'
                           )
                       ),
                     ]
@@ -126,7 +126,7 @@ class HomePageState extends State<HomePage>{
                             style: TextStyle(
                               fontSize: 25,
                                 color: Colors.black,
-                                fontFamily: 'Nanum Gothic Coding'
+                                fontFamily: 'robotomono'
                               )
   )
     )
